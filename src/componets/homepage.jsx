@@ -6,6 +6,7 @@ export default function Homepage(){
     return(
         <>
             <Slider/>
+            <br />
             <Cardskerala/>
         </>
     )
