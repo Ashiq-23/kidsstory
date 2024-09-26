@@ -10,7 +10,7 @@ import bek from './images/bakel.jpg';
 import atp from './images/Athirappilly.jpg';
 import { useNavigate } from 'react-router-dom';
 import { useContext, useState } from 'react';
-import { CommentContext } from './CommentProvider';
+import  CommentContext  from './CommentProvider';
 import { Container, Row, Col } from 'react-bootstrap';
 import '../App.css';
 
@@ -115,7 +115,7 @@ function Cardskerala() {
       <Row>
         {record.length > 0 ? (
           record
-            .filter((rec) => rec.title.toLowerCase().includes(title.toLowerCase()))
+            .filter((rec) => rec.title.toLowerCase().includes(comment.toLowerCase()))
             .map((list) => (
               <Col lg={3} className="mb-2" key={list.idno}>
                 <Card>

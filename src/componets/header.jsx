@@ -8,7 +8,7 @@ import Button from 'react-bootstrap/Button';
 import Register from './register';
 import logo from './images/Design 3.png';
 import Login from './login';
-import { CommentContext } from './CommentProvider';
+import  CommentContext  from './CommentProvider';
 
 function Header() {
   const [show, setShow] = useState(false);
@@ -23,6 +23,7 @@ function Header() {
 
   // State for search input
   const [searchInput, setSearchInput] = useState('');
+  
 
   return (
     <Navbar expand="lg" bg="primary" data-bs-theme="dark">
@@ -51,12 +52,11 @@ function Header() {
               <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
             </NavDropdown>
 
-            {/* New input field for search */}
+            
             <input
               type="text"
               placeholder="Search..."
-              value={searchInput}
-              onChange={(e) => setSearchInput(e.target.value)}
+              onChange={(e) => setComment(e.target.value)}
               className="me-2 form-control"
               style={{ maxWidth: '200px', display: 'inline-block', marginRight: '10px' }}
             />

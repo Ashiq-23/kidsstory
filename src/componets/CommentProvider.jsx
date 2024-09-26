@@ -1,11 +1,11 @@
 import { createContext, useState } from "react";
 
 // Export the context
-export const CommentContext = createContext();
+ const CommentContext = createContext();
 
 // CommentProvider component
 export const CommentProvider = ({ children }) => {
-    const [comment, setComment] = useState("This is the default comment");
+    const [comment, setComment] = useState("");
 
     return (
         <CommentContext.Provider value={{comment, setComment}}>
@@ -13,3 +13,4 @@ export const CommentProvider = ({ children }) => {
         </CommentContext.Provider>
     );
 };
+export default CommentContext;
